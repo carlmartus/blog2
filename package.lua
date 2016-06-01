@@ -4,6 +4,7 @@ return {
 	description = "Blog V2",
 	tags = { "luvit", "blog" },
 	license = "MIT",
+	private = true,
 	homepage = "http://martus.se/",
 	dependencies = {
 		"cyrilis/mooncake",
