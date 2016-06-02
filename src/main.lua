@@ -1,6 +1,6 @@
 local Mooncake = require 'mooncake'
-local meta = require './package'
-local inspect = require 'inspect'
+--local inspect = require 'inspect'
+
 
 local server = Mooncake:new()
 
@@ -19,6 +19,10 @@ end)
 
 server:get("/articles/:slug", function (req, res)
 	res:finish("Get article! " .. req.params.slug)
+end)
+
+server:get('/test', function (req, res)
+	res:render('./view/head.html', { title = 'TEST' })
 end)
 
 server:start(8080)
